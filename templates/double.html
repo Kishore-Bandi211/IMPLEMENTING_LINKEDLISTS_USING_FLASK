@@ -1,0 +1,513 @@
+<div id="glowscript" class="glowscript">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+    <link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/package/glow.3.1.min.js"></script>
+    <script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.1.min.js"></script>
+    <script type="text/javascript">
+    // < !--//-->
+    // < ![CDATA[//><!--
+
+// START JAVASCRIPT
+; (function () {
+                ;
+                var ρσ_modules = {};
+                ρσ_modules.pythonize = {};
+
+                (function () {
+                    function strings() {
+                        var string_funcs, exclude, name;
+                        string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+                        if (!arguments.length) {
+                            exclude = (function () {
+                                var s = ρσ_set();
+                                s.jsset.add("split");
+                                s.jsset.add("replace");
+                                return s;
+                            })();
+                        } else if (arguments[0]) {
+                            exclude = Array.prototype.slice.call(arguments);
+                        } else {
+                            exclude = null;
+                        }
+                        if (exclude) {
+                            string_funcs = string_funcs.difference(set(exclude));
+                        }
+                        var ρσ_Iter0 = string_funcs;
+                        ρσ_Iter0 = ((typeof ρσ_Iter0[Symbol.iterator] === "function") ? (ρσ_Iter0 instanceof Map ? ρσ_Iter0.keys() : ρσ_Iter0) : Object.keys(ρσ_Iter0));
+                        for (var ρσ_Index0 of ρσ_Iter0) {
+                            name = ρσ_Index0;
+                            (ρσ_expr_temp = String.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name] = (ρσ_expr_temp = ρσ_str.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name];
+                        }
+                    };
+                    if (!strings.__module__) Object.defineProperties(strings, {
+                        __module__: { value: "pythonize" }
+                    });
+
+                    ρσ_modules.pythonize.strings = strings;
+                })();
+                async function __main__() {
+                    "use strict";
+
+                    var version, display, vector, print, arange, __name__, type, scene, ρσ_ls, t, x, _GS_1, ll, scene1, commands, stream, i, list1;
+                    version = ρσ_list_decorate(["3.1", "glowscript"]);
+                    Array.prototype['+'] = function (r) { return this.concat(r) }
+                    Array.prototype['*'] = function (r) { return __array_times_number(this, r) }
+                    window.__GSlang = "vpython";
+                    display = canvas;
+                    vector = vec;
+                    print = GSprint;
+                    arange = range;
+                    __name__ = "__main__";
+                    type = pytype;
+                    scene = canvas();
+                    fontloading();
+                    await waitforfonts();
+                    var strings = ρσ_modules.pythonize.strings;
+
+                    strings();
+                    "5";
+                    function Node() {
+                        ;
+                    }
+                    Node.prototype.__init__ = async function __init__() {
+                        var self = this;
+                        var data = (arguments[0] === undefined || (0 === arguments.length["-"](1) && arguments[arguments.length["-"](1)] !== null && typeof arguments[arguments.length["-"](1)] === "object" && arguments[arguments.length["-"](1)][ρσ_kwargs_symbol] === true)) ? __init__.__defaults__.data : arguments[0];
+                        var next = (arguments[1] === undefined || (1 === arguments.length["-"](1) && arguments[arguments.length["-"](1)] !== null && typeof arguments[arguments.length["-"](1)] === "object" && arguments[arguments.length["-"](1)][ρσ_kwargs_symbol] === true)) ? __init__.__defaults__.next : arguments[1];
+                        var ρσ_kwargs_obj = arguments[arguments.length["-"](1)];
+                        if (ρσ_kwargs_obj === null || typeof ρσ_kwargs_obj !== "object" || ρσ_kwargs_obj[ρσ_kwargs_symbol] !== true) ρσ_kwargs_obj = {};
+                        if (Object.prototype.hasOwnProperty.call(ρσ_kwargs_obj, "data")) {
+                            data = ρσ_kwargs_obj.data;
+                        }
+                        if (Object.prototype.hasOwnProperty.call(ρσ_kwargs_obj, "next")) {
+                            next = ρσ_kwargs_obj.next;
+                        }
+                        "7";
+                        self.data = data;
+                        "8";
+                        self.next = next;
+                    };
+                    if (!Node.prototype.__init__.__defaults__) Object.defineProperties(Node.prototype.__init__, {
+                        __defaults__: { value: { data: null, next: null } },
+                        __handles_kwarg_interpolation__: { value: true },
+                        __argnames__: { value: ["data", "next"] },
+                        __module__: { value: null }
+                    });
+                    Node.__argnames__ = Node.prototype.__init__.__argnames__;
+                    Node.__handles_kwarg_interpolation__ = Node.prototype.__init__.__handles_kwarg_interpolation__;
+                    Node.prototype.__repr__ = async function __repr__() {
+                        return "<"["+"](__name__)["+"](".")["+"](this.constructor.name)["+"](" #")["+"](this.ρσ_object_id)["+"](">");
+                    };
+                    Node.prototype.__str__ = async function __str__() {
+                        return (await this.__repr__());
+                    };
+                    Object.defineProperty(Node.prototype, "__bases__", { value: [] });
+
+
+                    "10";
+                    function LinkedList() {
+                        ;
+                    }
+                    LinkedList.prototype.__init__ = async function __init__() {
+                        var self = this;
+                        "12";
+                        self.head = null;
+                    };
+                    if (!LinkedList.prototype.__init__.__module__) Object.defineProperties(LinkedList.prototype.__init__, {
+                        __module__: { value: null }
+                    });
+                    LinkedList.__argnames__ = LinkedList.prototype.__init__.__argnames__;
+                    LinkedList.__handles_kwarg_interpolation__ = LinkedList.prototype.__init__.__handles_kwarg_interpolation__;
+                    LinkedList.prototype.Lprint = async function Lprint() {
+                        var self = this;
+                        var ρσ_ls, list, texts, arrows, arrows1, itr, llstr, i, scene1;
+                        "16";
+                        list = ρσ_list_decorate([0])["*"]((await self.get_length()));
+                        "17";
+                        texts = ρσ_list_decorate([0])["*"]((await self.get_length()));
+                        "18";
+                        arrows = ρσ_list_decorate([0])["*"]((await self.get_length()));
+                        "19";
+                        arrows1 = ρσ_list_decorate([0])["*"]((await self.get_length()));
+                        "20";
+                        if (self.head === null) {
+                            "21";
+                            print("Linked list is empty");
+                            "22";
+                            return;
+                        }
+                        "24";
+                        itr = self.head;
+                        "25";
+                        llstr = "";
+                        "26";
+                        i = 0;
+                        "27";
+                        scene1 = ρσ_interpolate_kwargs.call(this, canvas, [ρσ_desugar_kwargs({ width: 800, height: 600, center: vector(0, 2, 0) })]);
+                        "29";
+                        while (itr) {
+                            "31";
+                            list[(typeof i === "number" && i["<"](0)) ? list.length["+"](i) : i] = ρσ_interpolate_kwargs.call(this, box, [ρσ_desugar_kwargs({ pos: vector(.5["-u"]()["+"](i["*"](2)), 0, 0), length: 1 })]);
+                            "32";
+                            (await rate(2));
+                            "33";
+                            texts[(typeof i === "number" && i["<"](0)) ? texts.length["+"](i) : i] = ρσ_interpolate_kwargs.call(this, text, [ρσ_desugar_kwargs({ text: str(itr.data), height: .25, pos: vector(.6["-u"]()["+"](i["*"](2)), .05["-u"](), .5), color: color.black, depth: 1e-4 })]);
+                            "34";
+                            (await rate(2));
+                            "35";
+                            arrows[(typeof i === "number" && i["<"](0)) ? arrows.length["+"](i) : i] = ρσ_interpolate_kwargs.call(this, arrow, [ρσ_desugar_kwargs({ pos: list[(typeof i === "number" && i["<"](0)) ? list.length["+"](i) : i].pos["+"](vector(.5, 0, 0)) })]);
+                            "36";
+                            arrows1[(typeof i === "number" && i["<"](0)) ? arrows1.length["+"](i) : i] = ρσ_interpolate_kwargs.call(this, arrow, [ρσ_desugar_kwargs({ pos: list[(typeof i === "number" && i["<"](0)) ? list.length["+"](i) : i].pos["+"](vector(1.5, .5["-u"](), 0)), axis: vector(1, 0, 0)["-u"]() })]);
+                            "37";
+                            (await rate(2));
+                            "38";
+                            llstr = llstr["+"]((itr.next) ? str(itr.data)["+"](" --> ") : str(itr.data));
+                            "39";
+                            itr = itr.next;
+                            "40";
+                            i = i["+"](1);
+                        }
+                        "41";
+                        print(llstr);
+                        "42";
+                        if ((t === 1 || typeof t === "object" && ρσ_equals(t, 1))) {
+                            "44";
+                            (await sleep(10));
+                        }
+                        "45";
+                        (await sleep(2));
+                        "46";
+                        scene1.remove();
+                    };
+                    if (!LinkedList.prototype.Lprint.__module__) Object.defineProperties(LinkedList.prototype.Lprint, {
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.get_length = async function get_length() {
+                        var self = this;
+                        var ρσ_ls, count, itr;
+                        "50";
+                        count = 0;
+                        "51";
+                        itr = self.head;
+                        "52";
+                        while (itr) {
+                            "53";
+                            count = count["+"](1);
+                            "54";
+                            itr = itr.next;
+                        }
+                        "56";
+                        return count;
+                    };
+                    if (!LinkedList.prototype.get_length.__module__) Object.defineProperties(LinkedList.prototype.get_length, {
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.insert_at_begining = async function insert_at_begining(data) {
+                        var self = this;
+                        var ρσ_ls, _GS_1, node;
+                        "59";
+                        _GS_1 = new Node;
+                        (await _GS_1.__init__(data, self.head));
+                        node = _GS_1;
+                        "60";
+                        self.head = node;
+                    };
+                    if (!LinkedList.prototype.insert_at_begining.__argnames__) Object.defineProperties(LinkedList.prototype.insert_at_begining, {
+                        __argnames__: { value: ["data"] },
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.insert_at_end = async function insert_at_end(data) {
+                        var self = this;
+                        var ρσ_ls, _GS_1, itr;
+                        "63";
+                        if (self.head === null) {
+                            "64";
+                            _GS_1 = new Node;
+                            (await _GS_1.__init__(data, null));
+                            self.head = _GS_1;
+                            "65";
+                            return;
+                        }
+                        "67";
+                        itr = self.head;
+                        "69";
+                        while (itr.next) {
+                            "70";
+                            itr = itr.next;
+                        }
+                        "72";
+                        _GS_1 = new Node;
+                        (await _GS_1.__init__(data, null));
+                        itr.next = _GS_1;
+                    };
+                    if (!LinkedList.prototype.insert_at_end.__argnames__) Object.defineProperties(LinkedList.prototype.insert_at_end, {
+                        __argnames__: { value: ["data"] },
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.insert_at = async function insert_at(index, data) {
+                        var self = this;
+                        var ρσ_ls, count, itr, _GS_1, node;
+                        "75";
+                        if (index["<"](0) || index[">"]((await self.get_length()))) {
+                            "76";
+                            print("Invalid Index");
+                            "77";
+                            return;
+                            "79";
+                        }
+                        if ((index === 0 || typeof index === "object" && ρσ_equals(index, 0))) {
+                            "80";
+                            (await self.insert_at_begining(data));
+                            "81";
+                            return;
+                        }
+                        "83";
+                        count = 0;
+                        "84";
+                        itr = self.head;
+                        "85";
+                        while (itr) {
+                            "86";
+                            if (ρσ_equals(count, index["-"](1))) {
+                                "87";
+                                _GS_1 = new Node;
+                                (await _GS_1.__init__(data, itr.next));
+                                node = _GS_1;
+                                "88";
+                                itr.next = node;
+                                "89";
+                                break;
+                            }
+                            "91";
+                            itr = itr.next;
+                            "92";
+                            count = count["+"](1);
+                        }
+                    };
+                    if (!LinkedList.prototype.insert_at.__argnames__) Object.defineProperties(LinkedList.prototype.insert_at, {
+                        __argnames__: { value: ["index", "data"] },
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.remove_at = async function remove_at(index) {
+                        var self = this;
+                        var ρσ_ls, count, itr;
+                        "95";
+                        if (index["<"](0) || index[">="]((await self.get_length()))) {
+                            "96";
+                            print("Invalid Index");
+                            "97";
+                            return;
+                            "99";
+                        }
+                        if ((index === 0 || typeof index === "object" && ρσ_equals(index, 0))) {
+                            "100";
+                            self.head = self.head.next;
+                            "101";
+                            return;
+                        }
+                        "103";
+                        count = 0;
+                        "104";
+                        itr = self.head;
+                        "105";
+                        while (itr) {
+                            "106";
+                            if (ρσ_equals(count, index["-"](1))) {
+                                "107";
+                                itr.next = itr.next.next;
+                                "108";
+                                break;
+                            }
+                            "110";
+                            itr = itr.next;
+                            "111";
+                            count = count["+"](1);
+                        }
+                    };
+                    if (!LinkedList.prototype.remove_at.__argnames__) Object.defineProperties(LinkedList.prototype.remove_at, {
+                        __argnames__: { value: ["index"] },
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.insert_values = async function insert_values(data_list) {
+                        var self = this;
+                        var ρσ_ls, data;
+                        "114";
+                        self.head = null;
+                        "115";
+                        var ρσ_Iter1 = data_list;
+                        ρσ_Iter1 = ((typeof ρσ_Iter1[Symbol.iterator] === "function") ? (ρσ_Iter1 instanceof Map ? ρσ_Iter1.keys() : ρσ_Iter1) : Object.keys(ρσ_Iter1));
+                        for (var ρσ_Index1 of ρσ_Iter1) {
+                            data = ρσ_Index1;
+                            "116";
+                            (await self.insert_at_end(data));
+                        }
+                    };
+                    if (!LinkedList.prototype.insert_values.__argnames__) Object.defineProperties(LinkedList.prototype.insert_values, {
+                        __argnames__: { value: ["data_list"] },
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.remove_at_start = async function remove_at_start() {
+                        var self = this;
+                        "119";
+                        if (self.head === null) {
+                            "120";
+                            print("The list has no element to delete");
+                            "121";
+                            return;
+                        }
+                        "122";
+                        self.head = self.head.next;
+                    };
+                    if (!LinkedList.prototype.remove_at_start.__module__) Object.defineProperties(LinkedList.prototype.remove_at_start, {
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.remove_at_end = async function remove_at_end() {
+                        var self = this;
+                        var ρσ_ls, n;
+                        "124";
+                        if (self.head === null) {
+                            "125";
+                            print("The list has no element to delete");
+                            "126";
+                            return;
+                        }
+                        "128";
+                        n = self.head;
+                        "129";
+                        while (n.next.next !== null) {
+                            "130";
+                            n = n.next;
+                        }
+                        "131";
+                        n.next = null;
+                    };
+                    if (!LinkedList.prototype.remove_at_end.__module__) Object.defineProperties(LinkedList.prototype.remove_at_end, {
+                        __module__: { value: null }
+                    });
+                    LinkedList.prototype.__repr__ = async function __repr__() {
+                        return "<"["+"](__name__)["+"](".")["+"](this.constructor.name)["+"](" #")["+"](this.ρσ_object_id)["+"](">");
+                    };
+                    LinkedList.prototype.__str__ = async function __str__() {
+                        return (await this.__repr__());
+                    };
+                    Object.defineProperty(LinkedList.prototype, "__bases__", { value: [] });
+
+
+
+
+
+
+
+
+
+
+
+                    (await sleep(.1));
+                    "133";
+                    t = int(input("ENTER NUMBER OF TEST CASES"));
+                    "134";
+                    x = t;
+                    "135";
+                    _GS_1 = new LinkedList;
+                    (await _GS_1.__init__());
+                    ll = _GS_1;
+                    "136";
+                    scene1 = ρσ_interpolate_kwargs.call(this, canvas, [ρσ_desugar_kwargs({ width: 800, height: 600, center: vector(0, 2, 0) })]);
+                    "137";
+                    commands = ρσ_list_decorate([]);
+                    "138";
+                    print("IL - insert list : IL 1 2 3 4 5 \n |  AB - add begining : AB 7  \n | AE - add end : AE 9 \n | DB - delete begining  \n | DE - delete end \n | IA - insert at index : IA 2(index) 10(element to be inserted) \n | RA - remove at index : 2(index) ");
+                    "140";
+                    while (x[">"](0)) {
+                        (await sleep(.1));
+                        "142";
+                        stream = (await input().split(" "));
+                        "143";
+                        commands.append(stream);
+                        "144";
+                        print(stream);
+                        "145";
+                        x = x["-"](1);
+                    }
+                    "147";
+                    i = 0;
+                    "148";
+                    while (t[">"](0)) {
+                        "149";
+                        stream = commands[(typeof i === "number" && i["<"](0)) ? commands.length["+"](i) : i];
+                        "150";
+                        i = i["+"](1);
+                        "151";
+                        if ((stream[0] === "AB" || typeof stream[0] === "object" && ρσ_equals(stream[0], "AB"))) {
+                            "152";
+                            (await ll.insert_at_begining(int(stream[1])));
+                            "153";
+                            (await ll.Lprint());
+                            "154";
+                        } else if ((stream[0] === "AE" || typeof stream[0] === "object" && ρσ_equals(stream[0], "AE"))) {
+                            "155";
+                            (await ll.insert_at_end(int(stream[1])));
+                            "156";
+                            (await ll.Lprint());
+                            "157";
+                        } else if ((stream[0] === "DB" || typeof stream[0] === "object" && ρσ_equals(stream[0], "DB"))) {
+                            "158";
+                            (await ll.remove_at_start());
+                            "159";
+                            (await ll.Lprint());
+                            "160";
+                        } else if ((stream[0] === "DE" || typeof stream[0] === "object" && ρσ_equals(stream[0], "DE"))) {
+                            "161";
+                            (await ll.remove_at_end());
+                            "162";
+                            (await ll.Lprint());
+                            "163";
+                        } else if ((stream[0] === "P" || typeof stream[0] === "object" && ρσ_equals(stream[0], "P"))) {
+                            "164";
+                            (await ll.Lprint());
+                            "165";
+                        } else if ((stream[0] === "L" || typeof stream[0] === "object" && ρσ_equals(stream[0], "L"))) {
+                            "166";
+                            (await ll.get_length());
+                            "167";
+                        } else if ((stream[0] === "IL" || typeof stream[0] === "object" && ρσ_equals(stream[0], "IL"))) {
+                            "168";
+                            list1 = stream.slice(1);
+                            "169";
+                            (await ll.insert_values(list1));
+                            "170";
+                            (await ll.Lprint());
+                            "171";
+                        } else if ((stream[0] === "IA" || typeof stream[0] === "object" && ρσ_equals(stream[0], "IA"))) {
+                            "172";
+                            (await ll.insert_at(int(stream[1]), int(stream[2])));
+                            "173";
+                            (await ll.Lprint());
+                            "174";
+                        } else if ((stream[0] === "RA" || typeof stream[0] === "object" && ρσ_equals(stream[0], "RA"))) {
+                            "175";
+                            (await ll.remove_at(int(stream[1])));
+                            "176";
+                            (await ll.Lprint());
+                            "178";
+                        } else {
+                            "179";
+                            print("enter valid command");
+                        }
+                        "181";
+                        t = t["-"](1);
+                    }
+                };
+                if (!__main__.__module__) Object.defineProperties(__main__, {
+                    __module__: { value: null }
+                });
+
+                ; $(function () { window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })
+            })()
+// END JAVASCRIPT
+
+//--><!]]>
+    </script>
+</div>
